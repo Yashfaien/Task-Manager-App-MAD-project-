@@ -55,7 +55,6 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
 
     if (selectedDate != null) {
       setState(() {
-        // Assign the new date and refresh UI
         _dueDate = selectedDate;
       });
     }

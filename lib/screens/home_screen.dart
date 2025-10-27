@@ -20,7 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final taskProvider = Provider.of<TaskProvider>(context);
     final allTasks = taskProvider.tasks;
 
-    // Filter tasks based on the "show completed" toggle
     final visibleTasks = _showCompleted
         ? allTasks
         : allTasks.where((task) => !task.isDone).toList();
@@ -62,7 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
               separatorBuilder: (_, __) => const Divider(),
               itemBuilder: (context, index) {
                 final task = visibleTasks[index];
-                // Find actual index from allTasks for update/delete
                 final actualIndex = allTasks.indexOf(task);
 
                 return TaskTile(

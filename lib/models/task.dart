@@ -14,8 +14,7 @@ class Task extends HiveObject {
   bool isDone;
 
   @HiveField(3)
-  DateTime? dueDate; // ✅ Added due date field
-
+  DateTime? dueDate;
   Task({
     required this.title,
     this.description,
